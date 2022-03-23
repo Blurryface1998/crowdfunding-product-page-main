@@ -1,0 +1,2 @@
+"use strict";var modal=document.getElementById("modal"),btn=document.getElementById("modalMenu"),span=document.getElementsByClassName("close")[0];btn.onclick=function(){modal.style.display="block",btn.style.display="none"},span.onclick=function(){modal.style.display="none",btn.style.display="block"},window.onclick=function(l){l.target==modal&&(modal.style.display="none",btn.style.display="block")};
+//# sourceMappingURL=script.js.map

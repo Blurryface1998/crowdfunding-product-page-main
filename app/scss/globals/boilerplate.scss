@@ -1,0 +1,29 @@
+@use "../util" as *;
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-Commissioner);
+    font-size: rem(16);
+    background-image: url("/images/image-hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: silver;
+    color: var(--black);
+
+    @include breakpoint(large) {
+        background-image: url("/images/image-hero-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
