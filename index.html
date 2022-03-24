@@ -56,26 +56,97 @@
         <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       </div>
       <div class="main__top--buttons">
-        <button>Back This Projcets</button>
+        <button id="buttonModal">Back This Projcets</button>
         <button><img src="images/icon-bookmark.svg" alt="Bookmark"><span>Bookmark</span></button>
       </div>
 
       <div class="main__top--modal">
-        <div class="modal--content">
+        <div class="main__top--modal--content">
+          <button class="iconClose"><img src="images/icon-close-modal.svg" alt="close modal"></button>
           <div class="descript">
           <h2>Back this project</h2>
           <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
           </div>
-          <div class="options">
-            <div class="options--name">
+            <form>
 
+              <!-- Pledge with no reward: -->
+              <div class="parts">
+                <div class="choose">
+              <label for="nRewards">Pledge with no reward</label>
+              <input type="radio" name="edition" id="radio">
+              <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p> 
             </div>
-            <div class="options--price"></div>
-            <div class="options--para"></div>
-          </div>
+            <div class="enterPledge">
+              <p>Enter your pledge</p>
+              <div class="amount">
+                <input type="button" name="bStand" value="Continue">
+              </div>
+            </div>
+            </div>
+              
+              
+
+            <!-- Bamboo Stand: -->
+              <div class="parts">
+                <div class="choose">
+                <label for="bStand">Bamboo Stand
+                  <span>Pledge $25 or more</span>
+                </label>
+                <input type="radio" name="edition" id="radio">
+                <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
+                <div class="left">
+                  <p>101</p>
+                  <span>left</span>
+                </div>
+              </div>
+                <div class="enterPledge">
+                  <p>Enter your pledge</p>
+                  <div class="amount">
+                    <input type="number" name="bStand" min="25" id="number" placeholder="&#36; 25">
+                    <input type="button" name="bStand" value="Continue">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Black Edition Stand: -->
+              <div class="parts">
+                <div class="choose">
+               <label for="bEStand">Black Edition Stand
+                <span>Pledge $75 or more</span>
+               </label>
+               <input type="radio" name="edition" id="radio">
+               <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+               <div class="left">
+                 <p>64</p>
+                 <span>left</span>
+               </div>
+              </div>
+               <div class="enterPledge">
+                <p>Enter your pledge</p>
+                <div class="amount">
+                <input type="number" name="bEStand" min="75" id="number" placeholder=" &#36; 75">
+                <input type="button" name="bEStand" value="Continue">
+              </div>
+              </div> 
+              </div>
+
+              <!-- Special Edition Stand: -->
+              <div class="parts">
+                <div class="choose">
+                <label for="mSedition">Mahogany Special Edition
+                  <span>Pledge $200 or more</span>
+                </label>
+                <input type="radio" name="edition" id="radio">
+                <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+                <div class="left">
+                  <p>0</p>
+                  <span>left</span>
+                </div>
+              </div>
+              </div>
+            </form>
         </div>
       </div>
-
     </section>
 
     <section class="main__middle">
@@ -166,9 +237,7 @@
   <!-- Selection modal start 
 
 
-  Pledge with no reward
-  Choose to support us without a reward if you simply believe in our project. As a backer, 
-  you will be signed up to receive product updates via email.
+  
 
   Bamboo Stand
   Pledge $25 or more
