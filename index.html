@@ -57,7 +57,7 @@
       </div>
       <div class="main__top--buttons">
         <button id="buttonModal">Back This Projcets</button>
-        <button><img src="images/icon-bookmark.svg" alt="Bookmark"><span>Bookmark</span></button>
+        <button id="bookmark"><img src="images/icon-bookmark.svg" alt="Bookmark"><span id="target">Bookmark</span></button>
       </div>
 
       <div class="main__top--modal">
@@ -73,26 +73,24 @@
               <div class="parts">
                 <div class="choose">
               <label for="nRewards">Pledge with no reward</label>
-              <input type="radio" name="edition" id="radio">
+              <input class="radioTest" type="radio" name="edition" value="nRewards" id="radio">
               <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p> 
             </div>
             <div class="enterPledge">
               <p>Enter your pledge</p>
               <div class="amount">
-                <input type="button" name="bStand" value="Continue">
+                <input class="btnContinue" type="button" name="bStand" value="Continue">
               </div>
             </div>
             </div>
               
-              
-
             <!-- Bamboo Stand: -->
               <div class="parts">
                 <div class="choose">
                 <label for="bStand">Bamboo Stand
                   <span>Pledge $25 or more</span>
                 </label>
-                <input type="radio" name="edition" id="radio">
+                <input class="radioTest" type="radio" name="edition" value="bStand" id="radio">
                 <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
                 <div class="left">
                   <p>101</p>
@@ -103,7 +101,7 @@
                   <p>Enter your pledge</p>
                   <div class="amount">
                     <input type="number" name="bStand" min="25" id="number" placeholder="&#36; 25">
-                    <input type="button" name="bStand" value="Continue">
+                    <input class="btnContinue" type="button" name="bStand" value="Continue">
                   </div>
                 </div>
               </div>
@@ -114,7 +112,7 @@
                <label for="bEStand">Black Edition Stand
                 <span>Pledge $75 or more</span>
                </label>
-               <input type="radio" name="edition" id="radio">
+               <input class="radioTest" type="radio" name="edition" value="bEStand" id="radio">
                <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
                <div class="left">
                  <p>64</p>
@@ -125,7 +123,7 @@
                 <p>Enter your pledge</p>
                 <div class="amount">
                 <input type="number" name="bEStand" min="75" id="number" placeholder=" &#36; 75">
-                <input type="button" name="bEStand" value="Continue">
+                <input class="btnContinue" type="button" name="bEStand" value="Continue">
               </div>
               </div> 
               </div>
@@ -136,7 +134,7 @@
                 <label for="mSedition">Mahogany Special Edition
                   <span>Pledge $200 or more</span>
                 </label>
-                <input type="radio" name="edition" id="radio">
+                <input onclick="this.checked=false" class="radioTest" type="radio" name="edition" value="mSedition" id="radio">
                 <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
                 <div class="left">
                   <p>0</p>
@@ -225,6 +223,15 @@
         <button>Out of Stock</button>
       </div>
     </section>
+
+    <section class="main__support">
+      <div class="main__support--modal">
+      <img src="images/icon-check.svg" alt="Check Icon">
+      <h2>Thanks for your support!</h2>
+      <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+      <button id="btn">Got it!</button>
+      </div>
+    </section>
   </main>
 
   
@@ -278,11 +285,6 @@
   <!-- Selection modal end -->
 
   <!-- Success modal start 
-
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it! -->
 
   <!-- Success modal end -->
 </body>

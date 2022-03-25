@@ -18,7 +18,7 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
-    background-color: silver;
+    background-color: #f3f3f3;
     color: var(--black);
 
     @include breakpoint(large) {

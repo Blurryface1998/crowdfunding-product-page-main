@@ -222,6 +222,10 @@
                     align-items: center;
                     background: silver;
                     border-radius: rem(30);
+                    
+                    &:hover {
+                        opacity: 0.8;
+                    }
                 }
 
                 img {
@@ -250,7 +254,7 @@
         }
 
         &--modal {
-            //display: none;
+            display: none;
             position: fixed;
             z-index: 1;
             padding-top: rem(70);
@@ -318,12 +322,11 @@
                         width: 90%;
                     }
                     
-                    .active {
-                        border: 5px solid red;
-                    }
+                    
 
                     .parts {
-                        border: 1px solid var(--darkGray);
+                        border: 1px solid;
+                        border-color: var(--darkGray);
                         text-align: start;
                         margin-bottom: rem(20);
                         border-radius: rem(10);
@@ -378,6 +381,7 @@
                                 height: rem(25);
                                 align-self: center;
                                 justify-self: center;
+                                cursor: pointer;
                                 
 
                                 @include breakpoint(large) {
@@ -421,6 +425,14 @@
                                 }
 
                             }
+                            &:last-child {
+                                opacity: 0.7;
+                                
+                                #radio {
+                                    cursor: default;
+                                    background: var(--darkGray);
+                                }
+                            }
 
 
                         }
@@ -428,10 +440,10 @@
                             border-top: 1px solid var(--darkGray);
                             padding: rem(10);
                             text-align: center;
-                            visibility: hidden;
+                            display: none;
 
                             @include breakpoint(large) {
-                                display: flex;
+                                
                                 justify-content: space-between;
                                 align-items: center;
                                 padding: rem(20);
@@ -494,12 +506,29 @@
                                 cursor: pointer;
                                 width: 50%;
 
+                                &:hover {
+                                    background-color: var(--darkCyan);
+                                }
+
                                 @include breakpoint(large) {
                                     width: 30%;
                                 }
                             }
                            }
                          }
+
+                         .display {
+                            display: block;
+                    
+                            @include breakpoint(large) {
+                                display: flex;
+                            }
+                         }
+
+                        }
+                        
+                        .active {
+                            border: 2px solid var(--moderateCyan);
                         }
                     }
                 }
@@ -740,4 +769,70 @@
             }
         }
     }
+
+    &__support {
+        display: none;        
+        position: fixed;
+        z-index: 1;
+        padding-top: rem(70);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.4);
+
+        
+        &--modal {
+            width: 90%;
+            margin: auto;
+            padding: rem(20);
+            border-radius: rem(10);
+            text-align: center;
+            background-color: white;
+
+            @include breakpoint(large) {
+                width: 40%;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: rem(20);
+            }
+
+            h2 {
+                font-weight: 700;
+                padding: rem(10);
+            }
+
+            p {
+                font-size: rem(18);
+                max-width: 25ch;
+                margin-inline: auto;
+                margin-block-start: rem(20);
+                margin-block-end: rem(40);
+            }
+
+            button {
+                padding: rem(20);
+                width: 60%;
+                border: none;
+                color: white;
+                background-color: var(--moderateCyan);
+                font-size: rem(18);
+                border-radius: rem(30);
+
+
+                @include breakpoint(large) {
+                    width: 40%;
+                    margin: rem(20);
+                }
+            }
+        }
+    }
+}
+
+button:hover {
+    background-color: var(--darkCyan);
 }
