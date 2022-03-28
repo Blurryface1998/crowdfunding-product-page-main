@@ -12,7 +12,11 @@ const continueBtn = document.querySelectorAll(".btnContinue");
 const gotIt = document.getElementById("btn");
 const modalStart = document.querySelector(".main__support");
 const bookmark = document.getElementById("bookmark");
-const demo = document.getElementById("demo");
+const text = document.getElementById("target");
+const image = document.getElementById("image");
+const imageReplace = document.getElementById("imagetwo");
+const numberInput = document.querySelectorAll("#number");
+const people = document.getElementById("people");
 
 // Modal menu for Nav
 btn.onclick = function() {
@@ -106,8 +110,13 @@ for(let i = 0; i < continueBtn.length; i++) {
 }
 
 // Bokmark change on click
-bookmark.onclick =  function() {
-   demo.classList.add("function");
-
-  
-};
+bookmark.addEventListener("click", function() {
+    let x = this;
+    if(x == this) {
+        text.classList.toggle("color");
+        this.classList.toggle("background");
+        (text.classList.contains("color") ? imageReplace.style.display = "block" : imageReplace.style.display = "none");
+        (text.classList.contains("color") ? image.style.display = "none" : image.style.display = "block");
+        (text.classList.contains("color") ? text.innerHTML = "Bookmarked" : text.innerHTML = "Bookmark");
+    }
+});
