@@ -11,12 +11,7 @@
         padding: 0 rem(100) 0 rem(100);
     }
 
-    &__logo {
-
-    }
-
     &__nav {
-
         button {
             border: none;
             background: transparent;
@@ -30,7 +25,6 @@
                 height: auto;
             }
         }
-
         
         &--list {
             display: none;
@@ -108,7 +102,7 @@
                         &:last-child {
                             border-bottom: none;
                         }
-                      }
+                        }
                     }
                 }
 
@@ -125,9 +119,7 @@
                     cursor: pointer;
                 }
             }
-    
           }
-
         }
     }
 }
@@ -269,289 +261,7 @@
 
         }
 
-        &--modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: rem(70);
-            padding-bottom: rem(70);
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background: rgba(0, 0, 0, 0.4);
-
-            &--content {
-                background-color: white;
-                width: 70%;
-                margin: auto;
-                padding: rem(20);
-                border-radius: rem(15);
-                text-align: end;
-
-                button {
-                    border: none;
-                    background: none;
-                    cursor: pointer;
-                    padding: rem(10);
-
-                    img {
-                        width: rem(20);
-                        height: rem(20);
-                    }
-                }
-                
-                .descript {
-                    text-align: start;
-                    margin-bottom: rem(25);
-                    width: 100%;
-                    margin: auto;
-
-                    @include breakpoint(large) {
-                        width: 90%;
-                        padding: rem(20);
-                    }
-
-
-                    h2 {
-                        margin-bottom: rem(25);
-                        font-weight: 700;
-                        
-                        @include breakpoint(large) {
-                            font-size: rem(30);
-                        }
-                    }
-
-                    p {
-                        color: var(--darkGray);
-                        font-size: rem(18);
-                        margin-bottom: rem(20);
-                    }
-                }
-
-                form {
-                    width: 100%;
-                    margin: auto;
-
-                    @include breakpoint(large) {
-                        width: 90%;
-                    }
-                    
-                    
-
-                    .parts {
-                        border: 1px solid;
-                        border-color: var(--darkGray);
-                        text-align: start;
-                        margin-bottom: rem(20);
-                        border-radius: rem(10);
-
-                        .choose {
-                            display: grid;
-                            grid-template-areas: 
-                            "btn h2 h2 h2"
-                            "p p p p"
-                            "left left left left";
-                            align-items: center;
-
-                            
-                            @include breakpoint(large) {    
-                                grid-template-areas: 
-                                "btn h2 h2 em left"
-                                "one p p p p";
-                                justify-content: start;
-                                padding: rem(30);
-                                }
-
-
-                            label {
-                                grid-area: h2;
-                                display: flex;
-                                flex-direction: column;
-                                font-weight: 700;
-                                padding: rem(20) rem(20) rem(20) 0;
-
-                                @include breakpoint(large) {
-                                    font-size: rem(18);
-                                    justify-content: center;
-                                    align-items: center;
-                                    flex-direction: row;
-                                    padding: rem(20);
-                                }
-
-                                span {
-                                    color: var(--moderateCyan);
-                                    padding-top: rem(10);
-
-                                    @include breakpoint(large) {
-                                       padding-top: 0;
-                                       padding-left: rem(30);
-                                    }
-                                }
-                            }
-
-                            #radio {
-                                grid-area: btn;
-                                width: rem(25);
-                                height: rem(25);
-                                align-self: center;
-                                justify-self: center;
-                                cursor: pointer;
-                                
-
-                                @include breakpoint(large) {
-                                    grid-area: btn;
-                                    margin-right: rem(20);
-                                    justify-self: center;
-                                    padding: rem(20);
-                                    margin: auto;
-                                }
-                            }
-
-                            p {
-                                grid-area: p;
-                                font-weight: rem(18);
-                                padding: rem(10);
-                                color: var(--darkGray);
-                            }
-
-                            .left {
-                                grid-area: left;
-                                display: flex;
-                                justify-content: start;
-                                align-items: center;
-                                padding: rem(10);
-                                
-                                p {
-                                    font-weight: 700;
-                                    color: var(--black);
-                                    font-size: rem(18);
-                                    padding: 0;
-
-                                    @include breakpoint(large) {
-                                        font-size: rem(20);
-                                    }
-                                }
-
-                                span {
-                                    color: var(--darkGray);
-                                    padding-left: rem(5);
-                                    font-size: rem(15);
-                                }
-
-                            }
-                            &:last-child {
-                                opacity: 0.7;
-                                
-                                #radio {
-                                    cursor: default;
-                                    background: var(--darkGray);
-                                }
-                            }
-
-
-                        }
-                        .enterPledge {
-                            border-top: 1px solid var(--darkGray);
-                            padding: rem(10);
-                            text-align: center;
-                            display: none;
-
-                            @include breakpoint(large) {
-                                
-                                justify-content: space-between;
-                                align-items: center;
-                                padding: rem(20);
-                            }
-
-                            p {
-                                padding-bottom: rem(20);
-                                color: var(--darkGray);
-
-                                @include breakpoint(large) {
-                                    font-size: rem(18);
-                                    padding-bottom: rem(10);
-                                }
-                            }
-
-                            .amount {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-
-                                @include breakpoint(large) {
-                                    justify-content: end;
-                                    width: 50%;
-                                }
-                                
-                               input[type=number] {
-                                border: 1px solid var(--darkGray);
-                                border-radius: rem(30);
-                                padding: rem(15);
-                                font-weight: 700;
-                                font-size: rem(18);
-                                width: 50%;
-                                margin-right: rem(15);
-
-                                @include breakpoint(large) {
-                                    width: 30%;
-                                }
-
-                                &::-webkit-inner-spin-button {
-                                    opacity: 0;
-                                }
-
-                                &::-webkit-input-placeholder {
-                                     color: var(--black);
-                                     text-align: center;
-
-                                    @include breakpoint(large) {
-                                        text-align: start;
-                                    }
-                                }
-                            }
-
-                            input[type=button] {
-                                border: none;
-                                background: var(--moderateCyan);
-                                border-radius: rem(30);
-                                color: white;
-                                padding: rem(15);
-                                font-size: rem(18);
-                                cursor: pointer;
-                                width: 50%;
-
-                                &:hover {
-                                    background-color: var(--darkCyan);
-                                }
-
-                                @include breakpoint(large) {
-                                    width: 30%;
-                                }
-                            }
-                           }
-                         }
-
-                         .display {
-                            display: block;
-                    
-                            @include breakpoint(large) {
-                                display: flex;
-                            }
-                         }
-
-                        }
-                        
-                        .active {
-                            border: 2px solid var(--moderateCyan);
-                        }
-                    }
-                }
-            }
-        }
-
-   
+    }
 
     &__middle {
         background: white;
@@ -651,7 +361,7 @@
             :first-child {
                 background-color: var(--moderateCyan);
                 border-radius: rem(50);
-                width: 80%;
+                width: 70%;
 
                 span {
                     visibility: hidden;
@@ -848,6 +558,290 @@
                     margin: rem(20);
                 }
             }
+        }
+    }
+
+    &__modal {      
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: rem(70);
+        padding-bottom: rem(70);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: rgba(0, 0, 0, 0.4);
+ 
+        &--content {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            padding: rem(20);
+            border-radius: rem(15);
+            text-align: end;
+ 
+            button {
+                border: none;
+                background: none;
+                cursor: pointer;
+                padding: rem(10);
+ 
+                img {
+                    width: rem(20);
+                    height: rem(20);
+                }
+            }
+                 
+            .descript {
+                text-align: start;
+                margin-bottom: rem(25);
+                width: 100%;
+                margin: auto;
+ 
+                @include breakpoint(large) {
+                    width: 90%;
+                    padding: rem(20);
+                }
+ 
+                h2 {
+                    margin-bottom: rem(25);
+                    font-weight: 700;
+                         
+                    @include breakpoint(large) {
+                        font-size: rem(30);
+                    }
+                }
+ 
+                p {
+                    color: var(--darkGray);
+                    font-size: rem(18);
+                    margin-bottom: rem(20);
+                }
+            }                     
+ 
+            .parts {
+                border: 1px solid;
+                border-color: var(--darkGray);
+                text-align: start;
+                margin-bottom: rem(20);
+                border-radius: rem(10);
+ 
+                .choose {
+                    display: grid;
+                    grid-template-areas: 
+                    "btn h2 h2 h2"
+                    "p p p p"
+                    "left left left left";
+                    align-items: center;
+ 
+                             
+                    @include breakpoint(large) {    
+                        grid-template-areas: 
+                        "btn h2 h2 em left"
+                        "one p p p p";
+                        justify-content: start;
+                        padding: rem(30);
+                    }
+ 
+ 
+                    label {
+                        grid-area: h2;
+                        display: flex;
+                        flex-direction: column;
+                        font-weight: 700;
+                        padding: rem(20) rem(20) rem(20) 0;
+ 
+                        @include breakpoint(large) {
+                            font-size: rem(18);
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: row;
+                            padding: rem(20);
+ 
+                            &:hover {
+                                color: var(--moderateCyan);
+                                cursor: pointer;
+                                }
+                        }
+ 
+                        span {
+                            color: var(--moderateCyan);
+                            padding-top: rem(10);
+ 
+                            @include breakpoint(large) {
+                                padding-top: 0;
+                                padding-left: rem(30);
+                                }
+                        }
+                    }
+ 
+                    #radio {
+                        grid-area: btn;
+                        width: rem(25);
+                        height: rem(25);
+                        align-self: center;
+                        justify-self: center;
+                        cursor: pointer;
+                                 
+ 
+                        @include breakpoint(large) {
+                            grid-area: btn;
+                            margin-right: rem(20);
+                            justify-self: center;
+                            padding: rem(20);
+                            margin: auto;
+                        }
+                    }
+ 
+                    p {
+                        grid-area: p;
+                        font-weight: rem(18);
+                        padding: rem(10);
+                        color: var(--darkGray);
+                    }
+ 
+                    .left {
+                        grid-area: left;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        padding: rem(10);
+                                 
+                        p {
+                            font-weight: 700;
+                            color: var(--black);
+                            font-size: rem(18);
+                            padding: 0;
+ 
+                            @include breakpoint(large) {
+                                font-size: rem(20);
+                                }
+                        }
+ 
+                        span {
+                            color: var(--darkGray);
+                            padding-left: rem(5);
+                            font-size: rem(15);
+                        }
+ 
+                    }
+                    
+                    &:last-child {
+                        opacity: 0.7;
+ 
+                        @include breakpoint(large) {
+                            label {
+                                &:hover {
+                                    color: var(--black);
+                                    cursor: default;
+                                }
+                            }
+                        }
+                                 
+                        #radio {
+                            cursor: default;
+                            background: var(--darkGray);
+                        }
+                    }
+ 
+ 
+                }
+                
+                .enterPledge {
+                    border-top: 1px solid var(--darkGray);
+                    padding: rem(10);
+                    text-align: center;
+                    display: none;
+ 
+                    @include breakpoint(large) {
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: rem(20);
+                    }
+ 
+                    p {
+                        padding-bottom: rem(20);
+                        color: var(--darkGray);
+                                 
+ 
+                        @include breakpoint(large) {
+                            font-size: rem(18);
+                            padding-bottom: rem(10);
+                        }
+                    }
+ 
+                    .amount {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+ 
+                        @include breakpoint(large) {
+                            justify-content: end;
+                            width: 50%;
+                        }
+                                
+                        input[type=number] {
+                            border: 1px solid var(--darkGray);
+                            border-radius: rem(30);
+                            padding: rem(15);
+                            font-weight: 700;
+                            font-size: rem(18);
+                            width: 50%;
+                            margin-right: rem(15);
+                            outline-color: var(--moderateCyan);
+ 
+                            @include breakpoint(large) {
+                                width: 30%;
+                            }
+ 
+                            &::-webkit-inner-spin-button {
+                                opacity: 0;
+                            }
+
+                            &::-webkit-input-placeholder {
+                                color: var(--darkGray);
+                                text-align: start;
+ 
+                            }
+                        }
+ 
+                        button {
+                            border: none;
+                            background: var(--moderateCyan);
+                            border-radius: rem(30);
+                            color: white;
+                            padding: rem(15);
+                            font-size: rem(18);
+                            cursor: pointer;
+                            width: 50%;
+ 
+                            &:hover {
+                                background-color: var(--darkCyan);
+                            }
+ 
+                            @include breakpoint(large) {
+                                width: 30%;
+                            }
+                        }
+ 
+                             
+                    }
+                }
+ 
+                .display {
+                    display: block;
+                     
+                    @include breakpoint(large) {
+                        display: flex;
+                    }
+                }
+            }
+
+            .active {
+                border: 2px solid var(--moderateCyan);
+            }           
         }
     }
 }
