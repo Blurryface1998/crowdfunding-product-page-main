@@ -14,16 +14,6 @@ html {
 body {
     font-family: var(--font-Commissioner);
     font-size: rem(16);
-    background-image: url("../../../images/image-hero-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
     background-color: #f3f3f3;
     color: var(--black);
-
-    @include breakpoint(large) {
-        background-image: url("../../../images/image-hero-desktop.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
 }
