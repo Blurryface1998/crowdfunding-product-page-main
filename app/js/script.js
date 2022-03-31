@@ -112,7 +112,8 @@ toggle(document.querySelectorAll(".parts"));
 gotIt.onclick = function() {
     modalStart.style.display = "none";
     body.style.overflow = "auto";
-};
+}
+
 noReward.onclick = function() {
     openModal();
     totalBackers();
