@@ -684,7 +684,7 @@
                         }
                     }
  
-                    #radio {
+                    .radioTest {
                         grid-area: btn;
                         width: rem(25);
                         height: rem(25);
@@ -747,7 +747,7 @@
                             }
                         }
                                  
-                        #radio {
+                        .radioTest {
                             cursor: default;
                             background: var(--darkGray);
                         }

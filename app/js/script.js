@@ -1,4 +1,4 @@
-let modal = document.getElementById("modal")
+let modal = document.getElementById("modal");
 let btn = document.getElementById("modalMenu");
 let span = document.getElementsByClassName("close")[0];
 let modalB = document.querySelector(".main__modal");
