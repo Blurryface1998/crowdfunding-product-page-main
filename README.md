@@ -7,6 +7,7 @@ This is a solution to the [Crowdfunding product page challenge on Frontend Mento
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -30,7 +31,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot.jpg)
+![](images/Screenshot.jpg)
+
+### Links
+
+- Solution URL: (https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-Hks4cAbQc)
+- Live Site URL: (https://blurryface1998.github.io/crowdfunding-product-page-main/)
+
+
 ## My process
 
 ### Built with
@@ -41,7 +49,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 
